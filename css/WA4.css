@@ -41,7 +41,7 @@ html {
   float: right;
 }
 
-.card header,
+ /* .card header,
 .card footer {
   height: 1.875em;      
   padding: 0.625em;
@@ -50,8 +50,8 @@ html {
 
 .h2, .p {
   margin: 0;
-}
+} */
 
 .article {
-  height: 1.3 em;
+  height: 14em;
 }
