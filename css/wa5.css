@@ -90,7 +90,7 @@ h1 {
 }
 
 .team-left {
-  border-left: none; /* No border on leftmost */
+  border-left: none; 
 }
 
 .team-right {
