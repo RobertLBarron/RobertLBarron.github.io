@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+ .spacing {
+    height: 50mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto;
+ }
+article {
+    flex-flow: column;
+    content: center;
+  background: url(../img/omegastrikersimage.webp) no-repeat center;
+   background-color: whitesmoke;
+  width: 169mm;
+  height: 95mm;
+  margin: 20px auto;
+  position: relative;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background: url(../img/logo.png);
+  border-radius: 90%;
+  box-shadow: 4px 4px 4px black;
+}
+
+/* Your CSS below here */
+
+.score-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  font-family: sans-serif;
+  font-size: 16px;
+  gap: 20px;
+}
+
+.team {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.team-left,
+.team-right,
+.game-info {
+  padding: 0 10px;
+}
+
+/* Add visual separation between sections */
+.team-left,
+.team-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.team-left {
+  border-left: none; /* No border on leftmost */
+}
+
+.team-right {
+  border-right: none; /* No border on rightmost */
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.team-score {
+  background: #fff;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.game-info {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
