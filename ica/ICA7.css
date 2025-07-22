@@ -1,0 +1,35 @@
+body{
+    background-color: khaki;
+}
+#box1{
+    width: 25vw;
+    height: 20vh;
+    background-color: indianred;
+    transition: background-color ease; 
+    transition-duration: 1.5s;
+    transition-delay: 1.5s;
+}
+
+#box1:hover{
+    background-color: purple;
+}
+
+
+#box2{
+    width: 25vw;
+    height:20vh;
+    position: relative;
+    background-color: orangered;
+    animation: box2move forwards;
+    animation-duration: 2s;
+}
+
+@keyframes box2move{
+    from{
+        left: 0;
+    }
+
+    to{
+        left: 200px;
+    }
+}
