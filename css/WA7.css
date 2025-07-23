@@ -1,0 +1,74 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: orangered;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:blue;
+    transition: ease-in-out;
+    transition-duration: 1s;
+}
+
+nav a:hover{
+    color: aqua;
+    text-decoration: dotted;
+}
+
+
+img{
+    width:30vw;
+    height: 30vh;
+}
+
+#red-ball{
+    background-color: blue;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation: box2move forwards;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes box2move{
+    0%{
+        left: 0vw;
+        top: 0vh;
+    }
+
+    25%{
+        left: 98.5vw;
+        top: 0vh;
+    }
+
+    50%{
+        left: 98.5vw;
+        top: 96vh;
+    }
+
+    75%{
+        left: 0vw;
+        top: 96vh;
+    }
+
+    100%{
+        left: 0vw;
+        top: 0vh;
+    }
+}
