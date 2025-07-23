@@ -1,6 +1,16 @@
 /* this color pallette in its entirety was taken from online resources. I'm almost fully colorblind and am overall
 bad at aesthetic construction, so for a big project like this I'm not going to risk it. I also used some google 
-tools to find a good font family. I used keywords "SCI-FI, futuristic, alien type font". */
+tools to find a good font family. I used keywords "SCI-FI, futuristic, alien type font".
+
+https://fonts.google.com/specimen/Orbitron
+
+https://www.shutterstock.com/blog/sci-fi-color-palettes#:~:text=Both%20Blade%20Runner%20(1982)%20and%20Blade%20Runner%202049%20(2017)%20are%20set%20in%20a%20dystopian%20future%20Los%20Angeles
+
+*/
+
+
+
+
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -62,7 +72,7 @@ tools to find a good font family. I used keywords "SCI-FI, futuristic, alien typ
 
     @media (min-width: 400px) {
       main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
     }
 
