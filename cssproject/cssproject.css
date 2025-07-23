@@ -1,0 +1,73 @@
+/* this color pallette in its entirety was taken from online resources. I'm almost fully colorblind and am overall
+bad at aesthetic construction, so for a big project like this I'm not going to risk it. I also used some google 
+tools to find a good font family. I used keywords "SCI-FI, futuristic, alien type font". */
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #fff, #f0f);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    section {
+      background: #000;
+      border-left: 5px solid #ff0;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+
+    section h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .details {
+      font-size: 0.9rem;
+      color: #f0f;
+      margin-bottom: 1rem;
+    }
+
+    .venue {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .repertoire {
+      font-weight: bold;
+      color: #ff0;
+    }
+
+    @media (min-width: 400px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1500px) {
+      main {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
