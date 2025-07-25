@@ -81,3 +81,19 @@ https://www.shutterstock.com/blog/sci-fi-color-palettes#:~:text=Both%20Blade%20R
         grid-template-columns: 1fr 1fr 1fr;
       }
     }
+
+
+    /* NOTES:
+    Make Navbar and footer
+    make the grid 2 columns instead of 3, less blank space
+    Make a more readable font for concert descriptions
+    Make the repretoire more readable plus add that word "repertoire" 
+    bold more things to distinctify information
+    
+    add opaque box to make white readable on the gradient.
+    make the main text a bit smaller on media 400
+    make the background not pure black, but a very dark grey
+
+    "responsive design mode"
+    
+    add on hover stuff*/
