@@ -139,6 +139,10 @@ footer {
   margin-top: 2rem;
 }
 
+strong{
+  color: #ff0;
+}
+
 /* Responsive media queries */
 @media (min-width: 400px) {
   main {
