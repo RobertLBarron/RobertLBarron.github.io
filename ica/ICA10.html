@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ica7.css" rel="stylesheet">
+    <title>IC10</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div id="ID1">
+        <p>Hover me to Change Me!</p>
+    </div>
+
+    <button>My Example Button</button>
+</body>
+
+<script>
+ const ID1 = document.getElementById('ID1');
+  const button = document.querySelector('button'); 
+
+  function handleClick(){
+    console.log('CLICK WORKED');
+    button.textContent = "You Pushed Me!";
+  }
+
+ function handleHoverON(){
+    console.log('HOVER WORKED');
+    ID1.style.backgroundColor = 'blue';
+  }
+
+  function handleHoverOFF(){
+    console.log('HOVER OFF WORKED');
+    ID1.style.backgroundColor = 'transparent';
+  }
+
+   button.addEventListener('click', handleClick);
+
+    ID1.addEventListener('mouseenter', handleHoverON);
+    ID1.addEventListener('mouseleave', handleHoverOFF);
+</script>
