@@ -9,11 +9,11 @@ const imageFilenames = ['codepoem.PNG', 'cinnasideeye.PNG', 'download.png', 'sex
 
 
 const imageAlts = {
-  'codepoem.PNG': 'picture of an insane lol jax game.',
-  'cinnasideeye.PNG': 'Rock that looks like a wave',
-  'download.png': 'Purple and white flowers',
-  'sexrepoimg1.PNG': 'Egyptian wall painting of a cat',
-  'wtfNjit.PNG': 'Butterfly on a leaf'
+  'codepoem.PNG': 'image of a poem to do with code.',
+  'cinnasideeye.PNG': 'picture of a cat giving a side-eye.',
+  'download.png': 'picture of the CU boulder logo.',
+  'sexrepoimg1.PNG': 'picture of a bunch of smears of DNA.',
+  'wtfNjit.PNG': 'picture of an OS stat chart, with NJIT being quite high up.'
 };
 
 
