@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ICA12.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-wrapper">
+    <div class="app">
+        <header>Random Christmas Trivia</header>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+          <div class="quote-text" id="js-answer-text"></div>
+        </section>
+        <section class="controls" >
+           <div id="top-button-flexbox">
+          <button type="button" id="js-new-quote" class="new-quote button">
+            Generate a new bit of trivia!
+          </button>
+          <button type="button" id="js-new-advice" class="new-quote button">
+            Generate a new bit of advice!
+          </button>
+          </div>
+          <button type="button" id="js-tweet" class="twitter button">
+            Show me the answer!
+          </button>
+          <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
+        </section>
+      </div>
+      <script src="../js/assignment12.js"></script>
+      </div>
+      <footer style="text-align: center; padding: 20px; font-size: 14px;">
+  <p>
+    <strong>Extension:</strong> This quote machine has been extended to include two different APIs: one for Christmas trivia and another for life advice. The interface now supports fetching either type of quote with dedicated buttons, dynamically updating the content area. This project also includes a button to reveal trivia answers and basic styling enhancements for layout responsiveness. Loading functionality was added (as recommended) due to slow speeds of the advice api.
+  </p>
+</footer>
+</body>
+
+</html>
