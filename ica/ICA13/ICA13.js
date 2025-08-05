@@ -56,19 +56,40 @@ class Ball {
     this.y += this.velY;
   }
 
-  collisionDetect() {
+    collisionDetect() {
     for (const ball of balls) {
-      if (!(this === ball)) {
+        if (this === ball) continue;
+
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
+        const minDist = this.size + ball.size;
 
-        if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
+        if (distance < minDist) {
+        // create a normalized directional vector
+        const nx = dx / distance;
+        const ny = dy / distance;
+
+        // we first need to seperate the balls, make sure they dont get stuck inside each other
+        const overlap = minDist - distance;
+        this.x += nx * (overlap / 2);
+        this.y += ny * (overlap / 2);
+        ball.x -= nx * (overlap / 2);
+        ball.y -= ny * (overlap / 2);
+
+        // Dot product, this helps us figure out the direction and magnitude with which to reverse the velocitys
+        const dot1 = this.velX * nx + this.velY * ny;
+        const dot2 = ball.velX * nx + ball.velY * ny;
+
+        // actually reverse the velocity using dot product - found this equation all online.
+        this.velX -= 2 * dot1 * nx;
+        this.velY -= 2 * dot1 * ny;
+        ball.velX -= 2 * dot2 * nx;
+        ball.velY -= 2 * dot2 * ny;
         }
-      }
     }
-  }
+    }
+
 }
 
 const balls = [];
@@ -80,8 +101,8 @@ while (balls.length < 25) {
     // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
-    random(-7, 7),
-    random(-7, 7),
+    random(-3, 3),
+    random(-3, 3),
     randomRGB(),
     size
   );
