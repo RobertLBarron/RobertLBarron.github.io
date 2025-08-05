@@ -77,11 +77,13 @@ class Ball {
         ball.x -= nx * (overlap / 2);
         ball.y -= ny * (overlap / 2);
 
+        //everything below this I got online, I couldn't figure out how to do vector reflection by myself.
+
         // Dot product, this helps us figure out the direction and magnitude with which to reverse the velocitys
         const dot1 = this.velX * nx + this.velY * ny;
         const dot2 = ball.velX * nx + ball.velY * ny;
 
-        // actually reverse the velocity using dot product - found this equation all online.
+        // actually reverse the velocity using dot product
         this.velX -= 2 * dot1 * nx;
         this.velY -= 2 * dot1 * ny;
         ball.velX -= 2 * dot2 * nx;
