@@ -1,28 +1,25 @@
 const keypad = document.getElementById("keypad");
 const display = document.getElementById("display");
 
-let digits = [...Array(10).keys()];
-
-// Shuffle digits using Fisher-Yates - TAKEN FROM ONLINE!
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+function getShuffledDigits() {
+  const digits = [...Array(10).keys()];
+  return digits.sort(() => Math.random() - 0.5);
 }
 
-function renderKeypad() {
+function updateKeypad() {
   keypad.innerHTML = "";
-  shuffle(digits);
-  digits.forEach(d => {
-    const btn = document.createElement("button");
-    btn.textContent = d;
-    btn.addEventListener("click", () => {
-      display.value += d;
-      renderKeypad(); 
-    });
-    keypad.appendChild(btn);
+
+  const shuffled = getShuffledDigits();
+
+  shuffled.forEach(digit => {
+    const button = document.createElement("button");
+    button.textContent = digit;
+    button.onclick = () => {
+      display.value += digit;
+      updateKeypad();
+    };
+    keypad.appendChild(button);
   });
 }
 
-renderKeypad();
+updateKeypad();
