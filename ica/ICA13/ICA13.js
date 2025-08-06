@@ -66,7 +66,7 @@ class Ball {
         const minDist = this.size + ball.size;
 
         if (distance < minDist) {
-        // create a normalized directional vector
+        // create a normalized directional vector AS OUR COLLISION NORMAL (the direction along which the reflection happens)
         const nx = dx / distance;
         const ny = dy / distance;
 
@@ -79,17 +79,35 @@ class Ball {
 
         //everything below this I got online, I couldn't figure out how to do vector reflection by myself.
 
-        // Dot product, this helps us figure out the direction and magnitude with which to reverse the velocitys
-        const dot1 = this.velX * nx + this.velY * ny;
-        const dot2 = ball.velX * nx + ball.velY * ny;
+        // Dot product. We normalize the differential so that we do not constantly scale the magnitudes, but simply create a scalar representitive of where to reflect.
+        const dot1 = (this.velX * nx) + this.velY * ny;
+        const dot2 = (ball.velX * nx) + ball.velY * ny;
 
         // actually reverse the velocity using dot product
         this.velX -= 2 * dot1 * nx;
         this.velY -= 2 * dot1 * ny;
         ball.velX -= 2 * dot2 * nx;
         ball.velY -= 2 * dot2 * ny;
+
+        // Calculate midpoint between balls (collision point approximation)
+const midX = (this.x + ball.x) / 2;
+const midY = (this.y + ball.y) / 2;
+
+// Scale normal vector for visibility (e.g., length 20 pixels)
+const normalLength = 20;
+const normalEndX = midX + nx * normalLength;
+const normalEndY = midY + ny * normalLength;
+
+// Draw the normal vector as an arrow
+ctx.beginPath();
+ctx.moveTo(midX, midY);
+ctx.lineTo(normalEndX, normalEndY);
+ctx.strokeStyle = 'red';    // color of the normal vector
+ctx.lineWidth = 2;
+ctx.stroke();
         }
     }
+    
     }
 
 }
@@ -103,8 +121,8 @@ while (balls.length < 25) {
     // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
-    random(-3, 3),
-    random(-3, 3),
+    random(-2, 2),
+    random(-2, 2),
     randomRGB(),
     size
   );
