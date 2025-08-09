@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Random Keypad</title>
+  <title>Random Keypad Canvas</title>
   <link rel="stylesheet" href="volumeproject.css">
 </head>
 <body>
-  <div class="container">
-    <input type="text" id="display" readonly />
-    <div class="keypad" id="keypad"></div>
-  </div>
+  <div id="wrapper" style="display: flex; flex-direction: column; align-items: center;">
+
+    <div class="container" style="height: 350px;">
+      <input type="text" id="display" readonly />
+      <canvas id="keypadCanvas" width="600" height="280"></canvas>
+    </div>
+
+    <h1 id="completeTag" style="display: none; margin-top: 15px; text-align: center;">Done!</h1>
+    <p id="completeTag2" style="display: none; margin-top: 15px; text-align: center;">refresh to try again!</p>
 
   <script src="volumeproject.js"></script>
 </body>
